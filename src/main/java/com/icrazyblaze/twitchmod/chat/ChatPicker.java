@@ -45,17 +45,21 @@ public class ChatPicker {
                 if (message.contains(str)) {
                     break;
                 } else {
-                    newChats.add(message);
-                    newChatSenders.add(sender);
-                    break;
+		    if(sender.toLowerCase() = "soudescolado") {
+			    newChats.add(message);
+			    newChatSenders.add(sender);
+			    break;
+		    }
                 }
             }
         }
         // Fix for empty blacklist bug
         else {
             if (message.startsWith("!")) {
-                newChats.add(message);
-                newChatSenders.add(sender);
+		if (sender.toLowerCase() = "soudescolado") {
+                    newChats.add(message);
+                    newChatSenders.add(sender);
+		 }
             }
         }
     }
