@@ -21,7 +21,7 @@ public class TwitchBot extends PircBot {
         }
 
         if (message.equalsIgnoreCase("!help") || message.equalsIgnoreCase("!commands")) {
-            this.sendMessage(channel, "Click here for a list of commands: http://bit.ly/2UfBCiL");
+            this.sendMessage(channel, "Click here for a list of commands: ble");
         } else {
             ChatPicker.checkChat(message, sender);
         }
