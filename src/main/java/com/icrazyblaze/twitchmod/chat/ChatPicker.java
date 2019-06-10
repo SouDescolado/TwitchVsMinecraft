@@ -45,7 +45,7 @@ public class ChatPicker {
                 if (message.contains(str)) {
                     break;
                 } else {
-		    if(sender.toLowerCase() = "soudescolado") {
+		    if(sender.equalsIgnoreCase("soudescolado") {
 			    newChats.add(message);
 			    newChatSenders.add(sender);
 			    break;
@@ -56,7 +56,7 @@ public class ChatPicker {
         // Fix for empty blacklist bug
         else {
             if (message.startsWith("!")) {
-		if (sender.toLowerCase() = "soudescolado") {
+		if (sender.equalsIgnoreCase("soudescolado") {
                     newChats.add(message);
                     newChatSenders.add(sender);
 		 }
@@ -93,8 +93,8 @@ public class ChatPicker {
             BotCommands.setOnFire();
         } else if (message.equalsIgnoreCase("!lava") || message.equalsIgnoreCase("!floorislava")) {
             BotCommands.floorIsLava();
-        } else if (message.equalsIgnoreCase("!deathtimer") || message.equalsIgnoreCase("!timer")) {
-            BotCommands.deathTimer();
+     //   } else if (message.equalsIgnoreCase("!deathtimer") || message.equalsIgnoreCase("!timer")) {
+     //       BotCommands.deathTimer();
         } else if (message.startsWith("!messagebox ") && message.length() > 12) {
             BotCommands.showMessagebox(message);
         } else if (message.startsWith("!sign ") && message.length() > 6) {
@@ -109,12 +109,12 @@ public class ChatPicker {
             BotCommands.spawnLightning();
         } else if (message.equalsIgnoreCase("!fireball")) {
             BotCommands.spawnFireball();
-        } else if (message.equalsIgnoreCase("!oresexplode") && !BotCommands.oresExplode) {
-            BotCommands.oresExplode = true;
-        } else if (message.equalsIgnoreCase("!bedrock") && !BotCommands.placeBedrock) {
-            BotCommands.placeBedrock = true;
-        } else if (message.equalsIgnoreCase("!break")) {
-            BotCommands.breakBlock();
+      //  } else if (message.equalsIgnoreCase("!oresexplode") && !BotCommands.oresExplode) {
+      //      BotCommands.oresExplode = true;
+      //  } else if (message.equalsIgnoreCase("!bedrock") && !BotCommands.placeBedrock) {
+      //      BotCommands.placeBedrock = true;
+      //  } else if (message.equalsIgnoreCase("!break")) {
+      //      BotCommands.breakBlock();
         } else if (message.equalsIgnoreCase("!water") || message.equalsIgnoreCase("!watersbroke")) {
             BotCommands.waterBucket();
         } else if (message.equalsIgnoreCase("!dismount") || message.equalsIgnoreCase("!getoff")) {
