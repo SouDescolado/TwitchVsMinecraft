@@ -155,6 +155,20 @@ public class BotCommands {
         player().world.spawnEntity(ent);
 
     }
+    public static void spawnFireworks() {
+
+        //Vec3d lookVector = player().getLookVec();
+
+        double dx = player().posX;
+        double dY = player().posY + 1;
+        double dz = player().posZ;
+
+        Entity ent = new EntityFireworkRocket(player().world);
+        ent.setPosition(dx, dy, dz);
+
+        player().world.spawnEntity(ent);
+
+    }
 
     public static void creeperScare() {
         player().world.playSound(null, player().posX, player().posY, player().posZ, SoundEvents.ENTITY_CREEPER_PRIMED, SoundCategory.HOSTILE, 1.0F, 1.0F);
