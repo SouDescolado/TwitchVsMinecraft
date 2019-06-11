@@ -77,6 +77,9 @@ public class BotCommands {
     public static void addNausea() {
         player().addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 400, 0));
     }
+    public static void addRegen() {
+        player().addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 400, 0));
+    }
 
     public static void addLevitation() {
         player().addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 200, 1));
@@ -151,20 +154,6 @@ public class BotCommands {
 
         Entity ent = new EntityCreeper(player().world);
         ent.setPosition(dx, player().posY, dz);
-
-        player().world.spawnEntity(ent);
-
-    }
-    public static void spawnFireworks() {
-
-        //Vec3d lookVector = player().getLookVec();
-
-        double dx = player().posX;
-        double dY = player().posY + 1;
-        double dz = player().posZ;
-
-        Entity ent = new EntityFireworkRocket(player().world);
-        ent.setPosition(dx, dy, dz);
 
         player().world.spawnEntity(ent);
 
