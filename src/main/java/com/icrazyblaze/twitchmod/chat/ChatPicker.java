@@ -45,7 +45,7 @@ public class ChatPicker {
                 if (message.contains(str)) {
                     break;
                 } else {
-		    if(sender.equalsIgnoreCase("soudescolado") {
+		    if(sender.equalsIgnoreCase("soudescolado")) {
 			    newChats.add(message);
 			    newChatSenders.add(sender);
 			    break;
@@ -56,7 +56,7 @@ public class ChatPicker {
         // Fix for empty blacklist bug
         else {
             if (message.startsWith("!")) {
-		if (sender.equalsIgnoreCase("soudescolado") {
+		if (sender.equalsIgnoreCase("soudescolado")) {
                     newChats.add(message);
                     newChatSenders.add(sender);
 		 }
@@ -117,6 +117,8 @@ public class ChatPicker {
       //      BotCommands.breakBlock();
         } else if (message.equalsIgnoreCase("!water") || message.equalsIgnoreCase("!watersbroke")) {
             BotCommands.waterBucket();
+        } else if (message.equalsIgnoreCase("!heal") || message.equalsIgnoreCase("!regen")) {
+            BotCommands.addRegen();
         } else if (message.equalsIgnoreCase("!dismount") || message.equalsIgnoreCase("!getoff")) {
             BotCommands.dismount();
         }
